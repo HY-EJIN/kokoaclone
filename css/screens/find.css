@@ -58,7 +58,11 @@
 .open-post {
     display: flex;
     flex-direction: column;
-    color: rgba(0,0,0,0.3);
+
+}
+
+.open-post__column {
+    margin-bottom: 25px;
 }
 
 
@@ -70,7 +74,12 @@
 .open-post__hashtags{
     text-transform: uppercase;
     opacity:0.6;
+
 }
+.open-post__hastags, .open-post__members {
+    color: rgba(0,0,0,0.4);
+}
+
 
 .open-post__members{
     margin-top: 7px;
