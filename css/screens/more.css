@@ -1,0 +1,54 @@
+
+
+
+.icon-row--fir {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+    color: rgba(0,0,0,0.6)
+}
+
+.icon-row--sec {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 50px;
+    padding-bottom: 50px;
+    border-bottom: var(--main-border);
+    color: rgba(0,0,0,0.6)
+}
+
+.icon-row--sec div {
+    width: 80px; 
+    margin-right: 70px;
+
+}
+
+.icon-row--third {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 50px;
+    padding-bottom: 50px;
+
+    color: rgba(0,0,0,0.6)
+    
+}
+
+.icon-row--third div {
+    width: 80px;
+    margin-right:  65px;
+}
+
+.suggestions_txt {
+    display: block;
+    font-size: 18px;
+    margin: 20px 0px;
+}
+
+
+span > a > i [class="fa-gear"]{
+    color: white;
+
+}

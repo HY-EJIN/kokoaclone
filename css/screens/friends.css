@@ -1,5 +1,9 @@
 
 
+ main {
+    max-height: 80vh;
+    overflow-y: scroll;
+ }
 
 #friends-display-link {
     text-align: center;
@@ -23,6 +27,30 @@
 }
 
 
-.user-component-inside{
-    margin-top: 20px;
+.friends-list__txt {
+    display: block;
+    font-size: 18px;
+    margin: 20px 10px;
+
+}
+
+.friends-list{
+    padding-bottom: 30px;
+    margin-bottom: 20px;
+}
+
+.friends-list__music span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 30px;
+    border: 2px solid yellowgreen ;
+    border-radius: 30px;
+    color: rgba(0,0,0,0.5);
+    font-size: 15px;
+
+}
+.friends-list__music i {
+    margin-right: 5px;
 }
