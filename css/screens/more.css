@@ -13,32 +13,34 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    width: 100%;
     margin-top: 50px;
     padding-bottom: 50px;
     border-bottom: var(--main-border);
     color: rgba(0,0,0,0.6)
 }
 
-.icon-row--sec div {
-    width: 80px; 
-    margin-right: 70px;
-
+.icon-row--sec div{
+    display: flex;
+    justify-content: flex-start;
+    width: 25%;
 }
 
 .icon-row--third {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    margin-top: 50px;
+    margin-top: 30px;
     padding-bottom: 50px;
-
+    width: 100%;
     color: rgba(0,0,0,0.6)
     
 }
 
 .icon-row--third div {
-    width: 80px;
-    margin-right:  65px;
+    display: flex;
+    justify-content: flex-start;
+    width: 25%;
 }
 
 .suggestions_txt {

@@ -10,7 +10,7 @@
     align-items: center;
     text-align: center;
     line-height: 2;
-    font-size: 3em;
+    font-size: 4em;
     font-weight: 800;
     top: 0;
 }
@@ -31,6 +31,23 @@
     font-size: 3em;
     font-weight: 800;
     top: 0;
+}
+#no-mobile img {
+    position: absolute;
+    top: 5vh;
+    width: 80%;
+    opacity: 0.2;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#no-landscape img {
+    position: absolute;
+    top: 5vh;;
+    width: 70%;
+    opacity: 0.2;
+    display: flex;
+    justify-content: flex-end;
 }
 
 
