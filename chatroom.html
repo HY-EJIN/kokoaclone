@@ -44,87 +44,104 @@
         </div>
         <div class="chatroom__content">
           <div class="chatroom__content__chat--friends">
-            <img src="rupi.jpeg" class="user-component__avatar--sm" />
+            <img src="rupi.jpeg" class="user-component__avatar--sm friendsAvatar" />
             <div class="chatroom__content__friend">
-              <div class="chatroom__content__friendID">Loopy</div>
+              <div class="chatroom__content__friendID friendsNameShow"></div>
               <div>Heyyyyyyyyy</div>
-        
             </div>
             <div class="chatroom__content__stamp">21:27</div>
           </div>
           <div class="chatroom__content__chat--mine">
-
             <div class="chatroom__content__stamp">22:27</div>
             <div>What the hell man?</div>
           </div>
           <div class="chatroom__content__chat--friends">
-            <img src="rupi.jpeg" class="user-component__avatar--sm" />
+            <img src="rupi.jpeg" class="user-component__avatar--sm friendsAvatar" />
             <div class="chatroom__content__friend">
-                <div class="chatroom__content__friendID">Loopy</div>
-                <div>Bro</div>    
+              <div class="chatroom__content__friendID friendsNameShow"></div>
+              <div>Bro</div>
             </div>
             <div class="chatroom__content__stamp">
-                <div class="chatroom__content__stamp chatroom__content__stamp--unread">
-                    1
-                </div></div>
+              <div
+                class="chatroom__content__stamp chatroom__content__stamp--unread"
+              >
+                1
+              </div>
+            </div>
           </div>
           <div class="chatroom__content__chat--friends">
-            <img src="rupi.jpeg" class="user-component__avatar--sm" />
+            <img src="rupi.jpeg" class="user-component__avatar--sm friendsAvatar" />
             <div class="chatroom__content__friend">
-                <div class="chatroom__content__friendID">Loopy</div>
-                <div class="latest-chat"></div>    
+              <div class="chatroom__content__friendID friendsNameShow">Loopy</div>
+              <div class="latest-chat"></div>
             </div>
             <div class="chatroom__content__stamp">
-                <div class="chatroom__content__stamp chatroom__content__stamp--unread">
-                    1
-                </div>23:22</div>
+              <div
+                class="chatroom__content__stamp chatroom__content__stamp--unread"
+              >
+                1
+              </div>
+              23:22
+            </div>
           </div>
-        </div>
-
- 
-
         </div>
       </div>
     </main>
-    
-        <form class="reply">
-            <div class="reply__column">
-                <i class="fa-regular fa-plus-square fa-lg"></i>
-            </div>
-            <div class="reply__column">
-                <input type = "text" placeholder="Write a message..."/>
-                <i class="fa-regular fa-smile-wink fa-lg"></i>
-                <button>
-                    <i class="fa-solid fa-arrow-up fa-lg"></i>
-                </button>
-            </div>
 
-        </form>
-    
+    <form class="reply">
+      <div class="reply__column">
+        <i class="fa-regular fa-plus-square fa-lg"></i>
+      </div>
+      <div class="reply__column">
+        <input type="text" placeholder="Write a message..." />
+        <i class="fa-regular fa-smile-wink fa-lg"></i>
+        <button>
+          <i class="fa-solid fa-arrow-up fa-lg"></i>
+        </button>
+      </div>
+    </form>
 
     <script
       src="https://kit.fontawesome.com/4480606934.js"
       crossorigin="anonymous"
     ></script>
     <script>
-      const friendsName = localStorage.getItem("friendsName");
-      const friendsSubtitle = localStorage.getItem("friendsSubtitle");
-
-      const friendsNameDisplay = document.querySelector(".friendsNameShow");
-      const friendsSubtitleDisplay = document.querySelector(".latest-chat");
-
-      if (friendsNameDisplay) {
-        if (friendsName) {
-          friendsNameDisplay.textContent = friendsName;
-        } else {
-          friendsNameDisplay.textContent = "Unknown Friend";
+        const friendsName = localStorage.getItem("friendsName");
+        const friendsSubtitle = localStorage.getItem("friendsSubtitle");
+        const friendsAvatar = localStorage.getItem("friendsAvatar");
+      
+        const friendsNameDisplays = document.querySelectorAll(".friendsNameShow");
+        const friendsSubtitleDisplays = document.querySelectorAll(".latest-chat");
+        const friendsAvatarDisplays = document.querySelectorAll(".friendsAvatar");
+      
+        if (friendsNameDisplays.length > 0) {
+          if (friendsName) {
+            friendsNameDisplays.forEach((element) => {
+              element.textContent = friendsName;
+            });
+          } else {
+            friendsNameDisplays.forEach((element) => {
+              element.textContent = "Unknown Friend";
+            });
+          }
         }
-      }
-      if (friendsSubtitleDisplay) {
-        if (friendsSubtitle) {
-          friendsSubtitleDisplay.textContent = friendsSubtitle;
+      
+        if (friendsSubtitleDisplays.length > 0) {
+          if (friendsSubtitle) {
+            friendsSubtitleDisplays.forEach((element) => {
+              element.textContent = friendsSubtitle;
+            });
+          }
         }
-      }
-    </script>
+      
+        if (friendsAvatarDisplays.length > 0) {
+          if (friendsAvatar) {
+            friendsAvatarDisplays.forEach((element) => {
+              element.src = friendsAvatar;
+            });
+          }
+        }
+      </script>
+      
   </body>
 </html>

@@ -136,17 +136,20 @@
     
       userComponentColumns.forEach((column) => {
         column.addEventListener("click", function (event) {
-          event.preventDefault(); // Prevent the default link behavior
+          event.preventDefault(); 
           const friendsName = column.querySelector(".user-component__title");
           const friendsSubtitle = column.querySelector(".user-component__subtitle");
+          const friendsAvatar = column.querySelector(".user-component__avatar")
 
           if (friendsName) {
             const nameText = friendsName.textContent;
-            const subtitleText = friendsSubtitle.textContent; // Get the subtitle text
+            const subtitleText = friendsSubtitle.textContent;
+            const avatarSrc = friendsAvatar.getAttribute("src");
 
             // Use localStorage to store the friendsName
             localStorage.setItem("friendsName", nameText);
             localStorage.setItem("friendsSubtitle", subtitleText);
+            localStorage.setItem("friendsAvatar", avatarSrc);
 
             window.location.href = "chatroom.html";
           }
