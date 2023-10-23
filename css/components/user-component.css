@@ -96,7 +96,7 @@
 }
 
 .user-component__title{
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 600;
     margin-left: 10px;
     color: black;
@@ -111,7 +111,7 @@
 .user-component__subtitle{
     width: 60vw;
     margin: 10px 10px;
-    font-size : 15px;
+    font-size : 13px;
     color: rgba(0,0,0,0.4);
 }
 

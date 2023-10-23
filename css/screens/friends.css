@@ -2,7 +2,7 @@
 
  main {
 
-    max-height: 80vh;
+    max-height: 91vh;
     overflow-y: scroll;
  }
 
@@ -37,26 +37,34 @@
 }
 
 .friends-list{
-    width: 80%;
-
+    width: 88vw;
+    margin-left: -3px;
     padding-bottom: 30px;
     margin-bottom: 20px;
+}
+
+.friends-list__music {
+    display: flex;
+    justify-content: flex-start;
 }
 
 .friends-list__music span {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 200px;
+    width: 30vw;
+    text-align: center;
     height: 30px;
     border: 2px solid yellowgreen ;
     border-radius: 30px;
     color: rgba(0,0,0,0.5);
-    font-size: 15px;
+    font-size: 11px;
+
+
 
 }
 .friends-list__music i {
-    margin-right: 5px;
+    margin: 0px 3px;
 }
 
 @keyframes hideSplashScreen {
