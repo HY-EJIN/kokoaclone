@@ -1,14 +1,4 @@
 
-.red-dot {
-    display: block;
-    width: 5px;
-    height: 5px;
-    background-color: tomato;
-    border-radius: 50%;
-    position: absolute;
-    top: -13px;
-    right: -5px;
-}
 
 .fa-gear {
     position: relative;
@@ -17,4 +7,19 @@
 
 .fa-ellipsis {
     position: relative;
+}
+
+.screen-header__icons {
+    position: relative;
+}
+
+.red-dot {
+    display: block;
+    width: 5px;
+    height: 5px;
+    background-color: tomato;
+    border-radius: 50%;
+    position: absolute;
+    top: -11px;
+    right: -7px;
 }
