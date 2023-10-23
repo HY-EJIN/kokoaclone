@@ -1,6 +1,7 @@
 
 
 .user-component {
+
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -52,21 +53,21 @@
 }
 
 .friends-screen__channel{
-    margin: 20px 0px 0px 15px;
+    margin: 20px 0px 0px 5px;
     color: rgba(0,0,0,0.4);
     padding-bottom: 20px;
     border-bottom: var(--main-border);
 }
 
 .user-component__avatar--xl{
-    width: 90px;
-    height: 90px;
+    width: 70px;
+    height: 70px;
     border-radius: 40%;
 
 }
 .user-component__avatar{
-    width: 70px;
-    height: 70px;
+    width: 50px;
+    height: 50px;
     border-radius: 40%;
 
 }

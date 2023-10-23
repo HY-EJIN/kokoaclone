@@ -1,6 +1,7 @@
 
 
  main {
+
     max-height: 80vh;
     overflow-y: scroll;
  }
@@ -9,9 +10,10 @@
     text-align: center;
     display: block;
     background-color:#fafafa;
-    padding: 20px 0px;
+    padding: 15px 0px;
     font-size: 15px;
-    margin-top: -15px;
+    margin-top: 0px;
+    border-radius: 20px;
 }
 
 
@@ -35,6 +37,8 @@
 }
 
 .friends-list{
+    width: 80%;
+
     padding-bottom: 30px;
     margin-bottom: 20px;
 }
