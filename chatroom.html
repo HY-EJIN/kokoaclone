@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link href="css/style.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chat Room - Kakao talk</title>
+  </head>
+
+  <body class="chatroom__settings">
+    <div class="status-bar">
+      <div class="status-bar__column">
+        <span>No service</span>
+        <i class="fa-solid fa-wifi"></i>
+      </div>
+      <div class="status-bar__column">
+        <span>23:43</span>
+      </div>
+      <div class="status-bar__column">
+        <span>110%</span>
+        <i class="fa-solid fa-battery-full"></i>
+        <i class="fa-solid fa-bolt"></i>
+      </div>
+    </div>
+
+    <header class="alt-header">
+      <div class="alt-header__column">
+        <a href="chat.html"> <i class="fa-solid fa-angle-left fa-3x"></i></a>
+      </div>
+      <div class="alt-header__column">
+        <h1 class="alt-header__title"></h1>
+      </div>
+
+      <div class="alt-header__column">
+        <i class="fa-solid fa-magnifying-glass fa-2x"></i>
+        <i class="fa-solid fa-bars fa-2x"></i>
+      </div>
+    </header>
+
+    <main class="friends-screen">
+        <div class="chatroom__content__date">
+            <span>Monday, Oct 23, 2023 </span>
+        </div>
+        <div class="chatroom__content__chat-friends">
+            
+        </div>
+        <div class="chatroom__content__chat-mine">
+            
+        </div>
+
+
+
+    </main>
+
+    <script
+      src="https://kit.fontawesome.com/4480606934.js"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      const friendsName = localStorage.getItem("friendsName");
+      const friendsSubtitle = localStorage.getItem("friendsSubtitle");
+
+      const friendsNameDisplay = document.querySelector(".alt-header__title");
+      const friendsSubtitleDisplay = document.querySelector(
+        ".alt-header__subtitle"
+      );
+
+      if (friendsNameDisplay) {
+        if (friendsName) {
+          friendsNameDisplay.textContent = friendsName;
+        } else {
+          // Handle the case where friendsName is not found
+          friendsNameDisplay.textContent = "Unknown Friend";
+        }
+    }
+    if (friendsSubtitleDisplay) {
+
+        if (friendsSubtitle) {
+          friendsSubtitleDisplay.textContent = friendsSubtitle; // Display the subtitle text
+        }
+      }
+    </script>
+    
+  </body>
+</html>

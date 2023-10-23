@@ -6,13 +6,23 @@
     justify-content: center;
 
 }
-
+.chatlink {
+    text-decoration: none;
+}
 
 .user-component__column{
     display: flex;
     align-items: center;
     margin: 15px 0px 15px 0px;
     position: relative;
+    border-radius: 30px;
+
+}
+
+
+.user-component__column:hover {
+    background-color: rgba(0,0,0,0.05);
+    padding: 15px 0px;
 
 }
 

@@ -36,59 +36,68 @@
 
     <main class="friends-screen">
       <div class="user-component">
-        <div class="user-component__column">
-          <img src="rupi.jpeg" class="user-component__avatar" />
-          <div></div>
-          <div class="user-component__text">
-            <h4 class="user-component__title">Lupi</h4>
-            <h6 class="user-component__subtitle">
-              I am not gonna drink alcohols again bro
-            </h6>
-          </div>
-          <div class="user-component__chat-info">
-            <h6 class="user-component__time">23:22</h6>
-            <h6 class="user-component__alarm badge">2</h6>
-          </div>
-        </div>
-        <div class="user-component__column">
-          <img
-            src="https://static.ebs.co.kr/images/public/lectures/2014/06/19/10/bhpImg/44deb98d-1c50-4073-9bd7-2c2c28d65f9e.jpg"
-            class="user-component__avatar"
-          />
-          <div class="user-component__text">
-            <h4 class="user-component__title">Ppororo</h4>
-            <h6 class="user-component__subtitle">you are dumb</h6>
-          </div>
-          <div class="user-component__chat-info">
-            <h6 class="user-component__time">22:17</h6>
-            <h6 class="user-component__alarm badge">1</h6>
-          </div>
-        </div>
-        <div class="user-component__column">
-          <img
-            src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg"
-            class="user-component__avatar"
-          />
-          <div class="user-component__text">
-            <h4 class="user-component__title">Mom</h4>
-            <h6 class="user-component__subtitle">Where are you?</h6>
-          </div>
-          <div class="user-component__chat-info">
-            <h6 class="user-component__time">19:57</h6>
-            <h6 class="user-component__alarm badge">1</h6>
-          </div>
-        </div>
-        <div class="user-component__column">
-          <img src="basic-prof.jpg" class="user-component__avatar" />
-          <div class="user-component__text">
-            <h4 class="user-component__title">Dad</h4>
-            <h6 class="user-component__subtitle">Always be careful pumpkin</h6>
-          </div>
-          <div class="user-component__chat-info">
-            <h6 class="user-component__time">08:57</h6>
-          </div>
-        </div>
-        
+        <a class="chatlink" href="chatroom.html"
+          ><div class="user-component__column">
+            <img src="rupi.jpeg" class="user-component__avatar" />
+            <div></div>
+            <div class="user-component__text">
+              <h4 class="user-component__title">Lupi</h4>
+              <h6 class="user-component__subtitle">
+                I am not gonna drink alcohols again bro
+              </h6>
+            </div>
+            <div class="user-component__chat-info">
+              <h6 class="user-component__time">23:22</h6>
+              <h6 class="user-component__alarm badge">2</h6>
+            </div>
+          </div></a
+        >
+        <a class="chatlink" href="chatroom.html"
+          ><div class="user-component__column">
+            <img
+              src="https://static.ebs.co.kr/images/public/lectures/2014/06/19/10/bhpImg/44deb98d-1c50-4073-9bd7-2c2c28d65f9e.jpg"
+              class="user-component__avatar"
+            />
+            <div class="user-component__text">
+              <h4 class="user-component__title">Pororo</h4>
+              <h6 class="user-component__subtitle">you are dumb</h6>
+            </div>
+            <div class="user-component__chat-info">
+              <h6 class="user-component__time">22:17</h6>
+              <h6 class="user-component__alarm badge">1</h6>
+            </div>
+          </div></a
+        >
+        <a class="chatlink" href="chatroom.html"
+          ><div class="user-component__column">
+            <img
+              src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg"
+              class="user-component__avatar"
+            />
+            <div class="user-component__text">
+              <h4 class="user-component__title">Mom</h4>
+              <h6 class="user-component__subtitle">Where are you?</h6>
+            </div>
+            <div class="user-component__chat-info">
+              <h6 class="user-component__time">19:57</h6>
+              <h6 class="user-component__alarm badge">1</h6>
+            </div>
+          </div></a
+        >
+        <a class="chatlink" href="chatroom.html"
+          ><div class="user-component__column">
+            <img src="basic-prof.jpg" class="user-component__avatar" />
+            <div class="user-component__text">
+              <h4 class="user-component__title">Dad</h4>
+              <h6 class="user-component__subtitle">
+                Always be careful pumpkin
+              </h6>
+            </div>
+            <div class="user-component__chat-info">
+              <h6 class="user-component__time">08:57</h6>
+            </div>
+          </div></a
+        >
       </div>
     </main>
 
@@ -122,5 +131,28 @@
       src="https://kit.fontawesome.com/4480606934.js"
       crossorigin="anonymous"
     ></script>
+    <script>
+      const userComponentColumns = document.querySelectorAll(".user-component__column");
+    
+      userComponentColumns.forEach((column) => {
+        column.addEventListener("click", function (event) {
+          event.preventDefault(); // Prevent the default link behavior
+          const friendsName = column.querySelector(".user-component__title");
+          const friendsSubtitle = column.querySelector(".user-component__subtitle");
+
+          if (friendsName) {
+            const nameText = friendsName.textContent;
+            const subtitleText = friendsSubtitle.textContent; // Get the subtitle text
+
+            // Use localStorage to store the friendsName
+            localStorage.setItem("friendsName", nameText);
+            localStorage.setItem("friendsSubtitle", subtitleText);
+
+            window.location.href = "chatroom.html";
+          }
+        });
+      });
+    </script>
+    
   </body>
 </html>
