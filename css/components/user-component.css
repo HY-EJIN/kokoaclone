@@ -30,7 +30,7 @@
     flex-direction: column;
     align-items: end;
     position: absolute;
-    right: 10px;
+    right: 3px;
 }
 
 
@@ -108,6 +108,7 @@
 }
 
 .user-component__subtitle{
+    width: 60vw;
     margin: 10px 10px;
     font-size : 15px;
     color: rgba(0,0,0,0.4);
@@ -116,6 +117,7 @@
 .user-component__time {
     margin-bottom: 10px;
     display: block;
+    margin-right: -3px;
     
 }
 
