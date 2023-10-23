@@ -37,3 +37,13 @@
 .status-bar__column .fa-bolt {
     margin: 0px 5px;
 }
+
+
+.chatroom__settings .status-bar {
+    z-index: 2;
+}
+
+.chatroom__settings .alt-header {
+    top: 10px;
+    z-index: 1;
+}

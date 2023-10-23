@@ -28,7 +28,7 @@
         <a href="chat.html"> <i class="fa-solid fa-angle-left fa-3x"></i></a>
       </div>
       <div class="alt-header__column">
-        <h1 class="alt-header__title"></h1>
+        <h1 class="alt-header__title friendsNameShow"></h1>
       </div>
 
       <div class="alt-header__column">
@@ -38,19 +38,69 @@
     </header>
 
     <main class="friends-screen">
-        <div class="chatroom__content__date">
-            <span>Monday, Oct 23, 2023 </span>
+      <div class="chatroom">
+        <div class="chatroom__timestamp">
+          <span>Monday, Oct 23, 2023 </span>
         </div>
-        <div class="chatroom__content__chat-friends">
-            
-        </div>
-        <div class="chatroom__content__chat-mine">
-            
+        <div class="chatroom__content">
+          <div class="chatroom__content__chat--friends">
+            <img src="rupi.jpeg" class="user-component__avatar--sm" />
+            <div class="chatroom__content__friend">
+              <div class="chatroom__content__friendID">Loopy</div>
+              <div>Heyyyyyyyyy</div>
+        
+            </div>
+            <div class="chatroom__content__stamp">21:27</div>
+          </div>
+          <div class="chatroom__content__chat--mine">
+
+            <div class="chatroom__content__stamp">22:27</div>
+            <div>What the hell man?</div>
+          </div>
+          <div class="chatroom__content__chat--friends">
+            <img src="rupi.jpeg" class="user-component__avatar--sm" />
+            <div class="chatroom__content__friend">
+                <div class="chatroom__content__friendID">Loopy</div>
+                <div>Bro</div>    
+            </div>
+            <div class="chatroom__content__stamp">
+                <div class="chatroom__content__stamp chatroom__content__stamp--unread">
+                    1
+                </div></div>
+          </div>
+          <div class="chatroom__content__chat--friends">
+            <img src="rupi.jpeg" class="user-component__avatar--sm" />
+            <div class="chatroom__content__friend">
+                <div class="chatroom__content__friendID">Loopy</div>
+                <div class="latest-chat"></div>    
+            </div>
+            <div class="chatroom__content__stamp">
+                <div class="chatroom__content__stamp chatroom__content__stamp--unread">
+                    1
+                </div>23:22</div>
+          </div>
         </div>
 
+ 
 
-
+        </div>
+      </div>
     </main>
+    
+        <form class="reply">
+            <div class="reply__column">
+                <i class="fa-regular fa-plus-square fa-lg"></i>
+            </div>
+            <div class="reply__column">
+                <input type = "text" placeholder="Write a message..."/>
+                <i class="fa-regular fa-smile-wink fa-lg"></i>
+                <button>
+                    <i class="fa-solid fa-arrow-up fa-lg"></i>
+                </button>
+            </div>
+
+        </form>
+    
 
     <script
       src="https://kit.fontawesome.com/4480606934.js"
@@ -60,26 +110,21 @@
       const friendsName = localStorage.getItem("friendsName");
       const friendsSubtitle = localStorage.getItem("friendsSubtitle");
 
-      const friendsNameDisplay = document.querySelector(".alt-header__title");
-      const friendsSubtitleDisplay = document.querySelector(
-        ".alt-header__subtitle"
-      );
+      const friendsNameDisplay = document.querySelector(".friendsNameShow");
+      const friendsSubtitleDisplay = document.querySelector(".latest-chat");
 
       if (friendsNameDisplay) {
         if (friendsName) {
           friendsNameDisplay.textContent = friendsName;
         } else {
-          // Handle the case where friendsName is not found
           friendsNameDisplay.textContent = "Unknown Friend";
         }
-    }
-    if (friendsSubtitleDisplay) {
-
+      }
+      if (friendsSubtitleDisplay) {
         if (friendsSubtitle) {
-          friendsSubtitleDisplay.textContent = friendsSubtitle; // Display the subtitle text
+          friendsSubtitleDisplay.textContent = friendsSubtitle;
         }
       }
     </script>
-    
   </body>
 </html>
